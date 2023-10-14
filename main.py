@@ -56,7 +56,7 @@ while True:
 
     if not name in final_data or final_data[name] == 0:
         print(f"{name} is not obtainable at this point.")
-        quit
+        continue
 
     odds = (final_data[name] / total) * 100
     print(f"The odds of getting a {name} this rebirth is {odds}%.")
