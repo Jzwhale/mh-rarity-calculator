@@ -9,31 +9,30 @@ import math
 clr = "\n"*1000
 print(clr+
 """Miner's Haven Reborn Chance Calculator
-by JONALD
-
-
-"""
+by JONALD"""
 )
 
 while True:
 
+    print("\n\n\n")
+
     name = input("Item Name: ")
 
     while not name in item_lists.reborns and not name in item_lists.advanced_reborns:
-        print("No item with that name!")
+        print("No item with that name!\n")
         name = input("Item Name: ")
 
     life = input("Life Count: ")
 
     while not life.isnumeric() or int(life) < 1:
-        print("You cannot be under life 1!")
+        print("You cannot be under life 1!\n")
         life = input("Life Count: ")
     life = int(life)
 
     skips = input("Skip Count: ")
 
     while not skips.isnumeric() or int(skips) < 0 or int(skips) > 20:
-        print("Out of bounds 0-20!")
+        print("Out of bounds 0-20!\n")
         skips = input("Skip Count: ")
     skips = int(skips)
 
@@ -60,4 +59,3 @@ while True:
 
     odds = (final_data[name] / total) * 100
     print(f"The odds of getting a {name} this rebirth is {odds}%.")
-    print("\n\n\n")
